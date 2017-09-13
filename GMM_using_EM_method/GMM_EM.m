@@ -1,4 +1,14 @@
 function [mean,cov,coef,p_for_GMM] = GMM_EM(X,K)
+%input:
+%   X:N*D matrix ,N data points in a D dimension space.
+%   K:The number of Gaussian you expected in the model.
+%output:
+%   mean:K*D matric,means of the Gaussian in the model
+%   cov:D*D*K matric, covariance of Gaussian in the model
+%   coef:K dimension vector,weight of each Gaussian in the model
+%   p_for_GMM:The probability of data points belong to each Gaussian in the
+%   model.
+%   write by JinYiKang 2017/9/13.
 [N,D] = size(X);
 
 %initilization parameters
